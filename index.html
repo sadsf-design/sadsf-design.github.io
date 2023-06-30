@@ -140,21 +140,6 @@
             var Backed = back.substring(0, back.length - 1);
             shuchukuangbefore.value = Backed;
         }
-        // 定义平方按钮
-        var pingfang = document.getElementById("平方");
-        pingfang.onclick = function () {
-            shuchukuangafter.value = Math.pow(shuchukuangbefore.value, 2);
-        }
-        //定义+/-按钮
-        //让符号变反数,当有shuchukuangafter时对输出结果进行正反输出，当shuchukuangafter没有时对shuchukuagnbefore进行正反输出
-        var zhengfan = document.getElementById("+/-");
-        zhengfan.onclick = function () {
-            if (shuchukuangafter.value != 0)
-                shuchukuangafter.value = -shuchukuangafter.value;
-            else {
-                shuchukuangbefore.value = -shuchukuangbefore.value;
-            }
-        }
         // 定义键盘事件
         document.body.onkeydown = function (e) {
             // 键盘事件:使用键盘时会触发其他按钮点击事件，导致字符多输入情况
