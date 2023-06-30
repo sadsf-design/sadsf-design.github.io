@@ -1,34 +1,36 @@
 <!DOCTYPE html>
 <html>
-    <head>
+<head>
+<style>
+	.login{
+            width:350px;
+            height:200px;
+            position:absolute;
+            left:50%;
+            top:50%;
+            margin-left:-150px;
+            margin-top:-100px;
  
-    </head>
-    <body>
-        <!--http://a.test.com-->
-        <button><font size="20">log in</font></button><!--登录页面标题-->
-            <table>
-                <form action="https://sadsf-design.github.io/test_project/" method="post">
-                <tr><td>
-                    <td>用户名:</td>
-                    <td>
-                        <input type="text" name="textbox1" /><!--用户名输入-->
-                    </td></tr>
-                <tr><td>
-                    <td>密码:</td>
-                    <td>
-                        <input type="password" name="textbox2" /><!--密码类型，隐藏式-->
-                    </td></tr>
-                <tr><td>
-                    
-                <!--<button>提交</button>-->
-                    <input type="submit" value="提交" /><!--提交键 与第10行action键互动-->
-                </td><td>
-                    <input type="reset" value="重置 " /><!--重置 所处的form内 所有的input填写的东西-->        
-                </td></tr>
-            </form>
-            </table>
-
-        <center><h1>405 Not Allowed</h1></center>
-        <hr><center>nginx/1.0.11</center>
-    </body>
+}
+</style>
+</head>
+<body>
+<div class="login">
+<label>UserName</label><br>
+<input id="username"><br>
+<label>Password</label><br>
+<input id="password" type="password"><br>
+<button onclick="myFunction()">Validate</button>
+</div>
+<script>
+function myFunction() {
+  var i,j;
+i="123456";
+j=document.getElementById("password").value;
+if(j==i){location.href="Untitled3.html";}
+else{alert("Password Failed!Please Input Again!");}
+}
+</script>
+ 
+</body>
 </html>
