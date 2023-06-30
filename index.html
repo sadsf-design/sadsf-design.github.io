@@ -90,37 +90,20 @@
         <input type="button" value="退格" id="退格">
     </div>
     <script>
-        var i, m;
         // 此处更改symbol值的顺序是为了实现键盘事件，因为键码值的顺序连续
-        var symbol = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9", "*", "+", "=", "-", ".", "/"];
-        // 外面的for循环动态设置了四个div盒子，分别装有四个不同的按钮
-        for (i = 0; i < symbol.length / 4; i++) {
-            var div = document.createElement("div");
-            // 里面的for循环动态设置了四个不同的按钮
-            for (m = 0; m < symbol.length / 4; m++) {
-                var input = document.createElement("input");
-                input.type = "button";
-                input.value = symbol[i * 4 + m];
-                input.id = i * 4 + m;
-                // 将四个按钮添加给div
-                div.appendChild(input);
-                input.onclick = function () {
-                    // this指的是调用函数的对象，此处指的是input
-                    shuchukuangbefore.value += this.value;
-                }
-                // 补全因两个input（shuchukuangbefore和shuchukuangafter）导致的加减乘除键盘的修正
-                if (input.id == 10 || input.id == 11 || input.id == 13 || input.id == 15) {
-                    input.onclick = function () {
-                        // this指的是调用函数的对象，此处指的是input
-                        if (shuchukuangafter.value != 0) {
-                            shuchukuangbefore.value = shuchukuangafter.value;
-                        }
-                        shuchukuangbefore.value += this.value;
-                    }
-                }
-            }
-            document.body.appendChild(div);
+        var symbol = ["="];
+        var div = document.createElement("div");
+        var input = document.createElement("input");
+        input.type = "button";
+        input.value = symbol[1];
+        input.id = 1;
+        // 将四个按钮添加给div
+        div.appendChild(input);
+        input.onclick = function () {
+            // this指的是调用函数的对象，此处指的是input
+            shuchukuangbefore.value += this.value;
         }
+        document.body.appendChild(div);
         // 定义最后输出内容按钮
         var results = document.getElementById("12");
         results.onclick = function () {
