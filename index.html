@@ -112,6 +112,19 @@
                shuchukuangbefore.value += "=";
                shuchukuangafter.value = result;
            }
+      // 定义清零CE按钮
+        var clear = document.getElementById("CE");
+        clear.onclick = function () {
+            shuchukuangbefore.value = "";
+            shuchukuangafter.value = "";
+        }
+        // 定义退格backspace按钮
+        var Backspace = document.getElementById("退格");
+        Backspace.onclick = function () {
+            var back = shuchukuangbefore.value;
+            var Backed = back.substring(0, back.length - 1);
+            shuchukuangbefore.value = Backed;
+        }
         // 定义键盘事件
         document.body.onkeydown = function (e) {
             // 键盘事件:使用键盘时会触发其他按钮点击事件，导致字符多输入情况
