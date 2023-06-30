@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>计算器</title>
+    <title>财务网站1.0</title>
     <style>
         * {
             margin: 0;
@@ -76,15 +76,13 @@
 </head>
  
 <body>
-    <h1>欢迎使用XXX的计算器</h1>
-    <p>---键盘使用也可，shift清零</p>
+    <h1>欢迎使用财务系统1.0</h1>
+    <p>---带登录密码和初步财务统计功能</p>
     <div class="shuchukuang">
         <input type="text" class="outbefore" id="shuchukuangbefore" readonly="readonly">
         <input type="text" class="outafter" id="shuchukuangafter" readonly="readonly">
     </div>
     <div class="gongneng">
-        <input type="button" value="平方" id="平方">
-        <input type="button" value="+/-" id="+/-">
         <input type="button" value="CE" id="CE">
         <input type="button" value="退格" id="退格">
     </div>
@@ -155,21 +153,6 @@
             var back = shuchukuangbefore.value;
             var Backed = back.substring(0, back.length - 1);
             shuchukuangbefore.value = Backed;
-        }
-        // 定义平方按钮
-        var pingfang = document.getElementById("平方");
-        pingfang.onclick = function () {
-            shuchukuangafter.value = Math.pow(shuchukuangbefore.value, 2);
-        }
-        //定义+/-按钮
-        //让符号变反数,当有shuchukuangafter时对输出结果进行正反输出，当shuchukuangafter没有时对shuchukuagnbefore进行正反输出
-        var zhengfan = document.getElementById("+/-");
-        zhengfan.onclick = function () {
-            if (shuchukuangafter.value != 0)
-                shuchukuangafter.value = -shuchukuangafter.value;
-            else {
-                shuchukuangbefore.value = -shuchukuangbefore.value;
-            }
         }
         // 定义键盘事件
         document.body.onkeydown = function (e) {
