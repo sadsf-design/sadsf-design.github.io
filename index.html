@@ -89,6 +89,28 @@
     <script>
         var i, m;
         // 此处更改symbol值的顺序是为了实现键盘事件，因为键码值的顺序连续
+        var results = document.getElementById("12");
+           results.onclick = function () {
+               var result;
+               // 判断程序是否出错，当出错时会出现err错误值
+               try {
+                   // 这里的if语句和isInteger是为了判断输出框内容是否为小数
+                   function isInteger(obj) {
+                       return (obj | 0) === obj
+                   }
+                   if (isInteger((eval(shuchukuangbefore.value))) == true) {
+                       result = eval(shuchukuangbefore.value);
+                   }
+                   else {
+                       result = eval(shuchukuangbefore.value).toFixed(2);
+                   }
+               }
+               catch (err) {
+                   result = err;
+               }
+               shuchukuangbefore.value += "=";
+               shuchukuangafter.value = result;
+           }
         // 定义键盘事件
         document.body.onkeydown = function (e) {
             // 键盘事件:使用键盘时会触发其他按钮点击事件，导致字符多输入情况
