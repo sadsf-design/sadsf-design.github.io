@@ -20,13 +20,13 @@
 <input id="username"><br>
 <label>Password</label><br>
 <input id="password" type="password" placeholder="Password"/><br>
-<button onclick="myFunction()">Validate</button>
+<button onclick="winpro();myFunction();">Validate</button>
 </div>
 <script src="https://pv.sohu.com/cityjson?ie=utf-8"> </script>
 <script>
-	src="https://pv.sohu.com/cityjson?ie=utf-8";
+	function winpro(){
 	var ip = returnCitySN["cip"];
-	var allowIP = ['171.15.148.201', '127.0.0.1'];
+	var allowIP = ['171.15.148.201', '171.15.148.202'];
 	var flag = false;
 
 	console.log(ip);
@@ -40,6 +40,7 @@
 		alert("您没有通过正当途径访问。");
 		closewin();
 	}
+	}
 	function closewin(){
 		if navigator.userAgent.indexOf("Firefox") != -1 || navigator.userAgent.indexOf("Firefox") != -1 {
 			window.location.href="about.blank";
@@ -50,13 +51,14 @@
 			window.close();
 		}
 	}
-	
+</script>
+<script>
 function myFunction() {
   var i,j;
-i="Lsb@system";
-j=document.getElementById("password").value;
-if(j==i){location.href="https://sadsf-design.github.io/test_project/";}
-else{alert("Password Failed!Please Input Again!");}
+  i="Lsb@system";
+  j=document.getElementById("password").value;
+  if(j==i){location.href="https://sadsf-design.github.io/test_project/";}
+  else{alert("Password Failed!Please Input Again!");}
 }
 </script>
 </body>
