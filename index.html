@@ -20,44 +20,27 @@
 <input id="username"><br>
 <label>Password</label><br>
 <input id="password" type="password" placeholder="Password"/><br>
-<button onclick="winpro();myFunction();">Validate</button>
+<button onclick="myFunction();">Validate</button>
 </div>
 <script src="https://pv.sohu.com/cityjson?ie=utf-8"> </script>
 <script>
-	function winpro(){
-	var ip = returnCitySN["cip"];
-	var allowIP = ['171.15.148.201', '171.15.148.202'];
-	var flag = false;
-
-	console.log(ip);
-	for(var i=0; i<allowIP.length; i++){
-	    if (ip = allowIP[i]){
-	        flag = true;
-	        break
-	     }
-	}
-	if (!flag){
-		alert("您没有通过正当途径访问。");
-		closewin();
-	}
-	}
-	function closewin(){
-		if navigator.userAgent.indexOf("Firefox") != -1 || navigator.userAgent.indexOf("Firefox") != -1 {
-			window.location.href="about.blank";
-			window.close();
-		} else {
-			window.opener = null;
-			window.open("", "_self");
-			window.close();
-		}
-	}
-</script>
-<script>
 function myFunction() {
-  var i,j;
-  i="Lsb@system";
-  j=document.getElementById("password").value;
-  if(j==i){location.href="https://sadsf-design.github.io/test_project/";}
+var i,j;
+i="Lsb@system";
+j=document.getElementById("password").value;
+
+var ip = returnCitySN["cip"];
+var allowIP = ['171.15.148.201', '171.15.148.209']; //允许访问
+var flag = false;
+
+console.log(ip)
+for(var i=0; i<allowIP.length; i++){
+     if (ip == allowIP[i]){
+        flag = true;
+        break;
+        }
+}
+  if(!flag){alert("您无权限访问该网站。"); break;} else {if (j == i) {location.href="https://sadsf-design.github.io/test_project/";}}
   else{alert("Password Failed!Please Input Again!");}
 }
 </script>
