@@ -31,6 +31,26 @@ if(j==i){location.href="https://sadsf-design.github.io/test_project/";}
 else{alert("Password Failed!Please Input Again!");}
 }
 </script>
- 
+<script src="https://pv.sohu.com/cityjson?ie=utf-8"> </script>
+<script>
+	var ip = returnCitySN["cip"];
+	var allowIP = ['171.15.148.201', '127.0.0.1'];
+	var flag = false;
+
+	console.log(ip);
+	for(var i=0; i<allowIP.length; i++){
+	    if (ip = allowIP[i]){
+	        flag = true;
+	        break
+	     }
+	}
+	if (!flag){
+		alert("您没有通过正当途径访问。");
+		closewin();
+	}
+	function closewin(){
+
+	}
+</script>
 </body>
 </html>
