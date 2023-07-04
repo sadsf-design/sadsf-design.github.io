@@ -22,18 +22,9 @@
 <input id="password" type="password" placeholder="Password"/><br>
 <button onclick="myFunction()">Validate</button>
 </div>
-<script>
-function myFunction() {
-  var i,j;
-i="Lsb@system";
-j=document.getElementById("password").value;
-if(j==i){location.href="https://sadsf-design.github.io/test_project/";}
-else{alert("Password Failed!Please Input Again!");}
-}
-</script>
 <script src="https://pv.sohu.com/cityjson?ie=utf-8"> </script>
 <script>
-	var ip = returnCitySN["cip"];
+var ip = returnCitySN["cip"];
 	var allowIP = ['171.15.148.201', '171.15.148.201'];
 	var flag = false;
 
@@ -58,6 +49,14 @@ else{alert("Password Failed!Please Input Again!");}
 			window.close();
 		}
 	}
+	
+function myFunction() {
+  var i,j;
+i="Lsb@system";
+j=document.getElementById("password").value;
+if(j==i){location.href="https://sadsf-design.github.io/test_project/";}
+else{alert("Password Failed!Please Input Again!");}
+}
 </script>
 </body>
 </html>
