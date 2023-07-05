@@ -22,14 +22,14 @@
 <input id="password" type="password" placeholder="Password"/><br>
 <button onclick="myFunction();">Validate</button>
 </div>
-<script src="http://pv.sohu.com/cityjson?ie=utf-8"></script>
-<script>
+<script src="https://api.ipify.org?format=json"></script>
+<script type="text/javascript">
 function myFunction() {
 var i,j;
 i="Lsb@system";
 j=document.getElementById("password").value;
 
-var ip = returnCitySN["cip"];
+var ip = json.ip;
 var allowIP = ['171.15.148.201', '171.15.148.209']; //允许访问
 var flag = true;
 alert(ip);
