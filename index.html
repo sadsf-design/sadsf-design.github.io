@@ -22,7 +22,7 @@
 <input id="password" type="password" placeholder="Password"/><br>
 <button onclick="myFunction();">Validate</button>
 </div>
-<script src="https://pv.sohu.com/cityjson?ie=utf-8"> </script>
+
 <script>
 function myFunction() {
 var i,j;
@@ -30,13 +30,13 @@ i="Lsb@system";
 j=document.getElementById("password").value;
 
 var ip = returnCitySN["cip"];
-var allowIP = returnCitySN["cip"]; //允许访问
-var flag = false;
+var allowIP = ['171.15.148.201', '171.15.148.209']; //允许访问
+var flag = true;
 
 console.log(ip)
 for(var i=0; i<allowIP.length; i++){
      if (ip == allowIP[i]){
-        flag = true;
+
         break;
         }
 }
