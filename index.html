@@ -28,18 +28,8 @@ function myFunction() {
 var i,j;
 i="Lsb@system";
 j=document.getElementById("password").value;
-
-var ip = returnCitySN["cip"];
 var allowIP = ['171.15.148.201', '171.15.148.209']; //允许访问
 var flag = true;
-
-console.log(ip)
-for(var i=0; i<allowIP.length; i++){
-     if (ip == allowIP[i]){
-
-        break;
-        }
-}
   if(!flag){
 	  alert("您无权限访问该网站!"); break;
 	   } else 
