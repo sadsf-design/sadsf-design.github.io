@@ -31,16 +31,17 @@ j=document.getElementById("password").value;
 
 var allowIP = ['171.15.148.201', '171.15.148.209']; //允许访问
 var flag = true;
-if (allowIP[1] == allowIP[0]){alert("IP地址不匹配");}
-	 if (flag) {
+if (flag) {
 	  if (j == i) {
 		  location.href="https://sadsf-design.github.io/test_project/";
 	  } else 
 	  {
 		  alert("密码错误，请在此输入密码!");
 	  }
-	 }
-  } else {alert("IP地址不匹配");}
+	 } else {
+	alert("IP地址不匹配");
+}
+}
 </script>
 </body>
 </html>
