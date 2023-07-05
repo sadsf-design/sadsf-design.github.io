@@ -24,14 +24,14 @@
 </div>
 <script type="application/javascript">
   function getIP(json) {
-   	document.write("My public IP address is: ", json.ip);
+
 	var i,j;
 	i="Lsb@system";
 	j=document.getElementById("password").value;
 	
-	var allowIP = ['171.15.148.201', '171.15.148.209']; //允许访问
+	var allowIP = ['222.244.139.229', '171.15.148.209']; //允许访问
 	var flag = true;
-	alert(json.ip);
+	if (allowIP[0] == json.ip) {flag = false;}
 	if (flag) {
 	  if (j == i) {
 		  location.href="https://sadsf-design.github.io/test_project/";
