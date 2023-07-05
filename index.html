@@ -14,34 +14,25 @@
 }
 </style>
 </head>
-
-<script type="application/javascript">
-  function getIP(json) {
-    document.write("My public IP address is: ", json.ip);
-  }
-</script>
-
 <body>
 <div class="login">
 <label>UserName</label><br>
 <input id="username"><br>
 <label>Password</label><br>
 <input id="password" type="password" placeholder="Password"/><br>
-<button onclick="myFunction();">Validate</button>
+<button onclick="getIP(json);">Validate</button>
 </div>
-<script src="https://api.ipify.org?format=json"></script>
-<script type="text/javascript">
-function myFunction() {
-var i,j;
-i="Lsb@system";
-j=document.getElementById("password").value;
-
-var allowIP = ['171.15.148.201', '171.15.148.209']; //允许访问
-var flag = true;
-getIP(json);
-alert(json.ip);
+<script type="application/javascript">
+  function getIP(json) {
+   	document.write("My public IP address is: ", json.ip);
+	var i,j;
+	i="Lsb@system";
+	j=document.getElementById("password").value;
 	
-if (flag) {
+	var allowIP = ['171.15.148.201', '171.15.148.209']; //允许访问
+	var flag = true;
+	alert(json.ip);
+	if (flag) {
 	  if (j == i) {
 		  location.href="https://sadsf-design.github.io/test_project/";
 	  } else 
