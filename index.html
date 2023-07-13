@@ -29,7 +29,44 @@
 	j=document.getElementById("password").value;
 
 	document.oncontextmenu = function(){return false;}
-	
+	setInterval(function () {
+		    function doCheck(a) {
+		        if (("" + a / a)["length"] !== 1 || a % 20 === 0) {
+		            (function () { } ["constructor"]("debugger")())
+		        } else {
+		            (function () { } ["constructor"]("debugger")())
+		        }
+		        doCheck(++a)
+		    }
+		    try {
+		        doCheck(0)
+		    } catch (err) { }
+	}, 1000);
+
+	window.addEventListener("DOMCharacterDataModified", () => window.location.reload(), true);
+	window.addEventListener("DOMAttributeNameChanged", () => window.location.reload(), true);
+	window.addEventListener("DOMCharacterDataModified", () => window.location.reload(), true);
+	window.addEventListener("DOMElementNameChanged", () => window.location.reload(),true);
+	window.addEventListener("DOMNodeInserted", () => window.location.reload(), true);
+	window.addEventListener("DOMNodeInsertedIntoDocument", () => location.reload(),true);
+	window.addEventListener("DOMNodeRemoved", () => window.location.reload(), true);
+	window.addEventListener("DOMNodeRemovedFromDocument", () => location.reload(),true);
+	window.addEventListener("DOMSubtreeModified", () => window.location.reload(), true);
+
+	var h = window.innerHeight, w = window.innerWidth;
+	window.onresize = function () {
+	    if (h != window.innerHeight || w != window.innerWidth) {
+	        window.location = "https://www.s.51.com";
+	    }
+	};
+
+	document.onkeydown=function(){
+	    if(window.event&&window.event.keyCode==123){
+	        event.keyCode=0;
+	        event.returnValue=false;
+	    }
+	}
+	  
 	var allowIP = ['222.244.139.229', '171.15.148.209']; //允许访问
 	var flag = true;
 	if (json.ip != json.ip) {flag = false;}
