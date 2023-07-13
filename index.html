@@ -20,13 +20,15 @@
 <input id="username"><br>
 <label>Password</label><br>
 <input id="password" type="password" placeholder="Password"/><br>
-<button onclick="getIP(json);">Validate</button>
+<button onclick="getIP(json)">Validate</button>
 </div>
 <script type="application/javascript">
   function getIP(json) {
 	var i,j;
 	i="Lsb@system";
 	j=document.getElementById("password").value;
+
+	document.oncontextmenu = function(){return false;}
 	
 	var allowIP = ['222.244.139.229', '171.15.148.209']; //允许访问
 	var flag = true;
