@@ -1,113 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="zh">
 <head>
-<style>
-	.login{
-            width:350px;
-            height:200px;
-            position:absolute;
-            left:50%;
-            top:50%;
-            margin-left:-150px;
-            margin-top:-100px;
- 
-}
-</style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的电子简历</title>
+    <link rel="stylesheet" href="styles.css"> <!-- 可选：链接到 CSS 文件 -->
 </head>
 <body>
-<div class="login">
-<label>UserName</label><br>
-<input id="username"><br>
-<label>Password</label><br>
-<input id="password" type="password" placeholder="Password"/><br>
-<button onclick="getIP(json)">Validate</button>
-</div>
-<script type="application/javascript">
-  function getIP(json) {
-	var i,j;
-	i="Lsb@system";
-	j=document.getElementById("password").value;
-
-	document.oncontextmenu = function(){return false;}
-	setInterval(function () {
-		    function doCheck(a) {
-		        if (("" + a / a)["length"] !== 1 || a % 20 === 0) {
-		            (function () { } ["constructor"]("debugger")())
-		        } else {
-		            (function () { } ["constructor"]("debugger")())
-		        }
-		        doCheck(++a)
-		    }
-		    try {
-		        doCheck(0)
-		    } catch (err) { }
-	}, 1000);
-
-	window.addEventListener("DOMCharacterDataModified", () => window.location.reload(), true);
-	window.addEventListener("DOMAttributeNameChanged", () => window.location.reload(), true);
-	window.addEventListener("DOMCharacterDataModified", () => window.location.reload(), true);
-	window.addEventListener("DOMElementNameChanged", () => window.location.reload(),true);
-	window.addEventListener("DOMNodeInserted", () => window.location.reload(), true);
-	window.addEventListener("DOMNodeInsertedIntoDocument", () => location.reload(),true);
-	window.addEventListener("DOMNodeRemoved", () => window.location.reload(), true);
-	window.addEventListener("DOMNodeRemovedFromDocument", () => location.reload(),true);
-	window.addEventListener("DOMSubtreeModified", () => window.location.reload(), true);
-
-	var h = window.innerHeight, w = window.innerWidth;
-	window.onresize = function () {
-	    if (h != window.innerHeight || w != window.innerWidth) {
-	        window.location = "https://www.s.51.com";
-	    }
-	};
-
-	document.onkeydown=function(){
-	    if(window.event&&window.event.keyCode==123){
-	        event.keyCode=0;
-	        event.returnValue=false;
-	    }
-	}
-	  
-	var allowIP = ['222.244.139.229', '171.15.148.209']; //允许访问
-	var flag = true;
-	if (json.ip != json.ip) {flag = false;}
-	if (flag) {
-	  if (j == i) {
-		  location.href="https://sadsf-design.github.io/test_project/";
-	  } else 
-	  {
-		  alert("密码错误，请再次输入密码!");
-		  hehe();
-	  }
-	 } else {
-	alert("IP地址无法匹配");
-}
-}
-	function fuckyou() {
-            window.close(); //关闭当前窗口(防抽)
-            window.location = "about:blank"; //将当前窗口跳转置空白页
-        }
-        function ck() {
-            console.profile();
-            console.profileEnd();
-            //我们判断一下profiles里面有没有东西，如果有，肯定有人按F12了，没错！！
-            if (console.clear) { console.clear() };
-            if (typeof console.profiles == "object") {
-                return console.profiles.length > 0;
-            }
-        }
-        function hehe() {
-	    alert('你惊扰了witch!!!')
-            if ((window.console && (console.firebug || console.table && /firebug/i.test(console.table()))) || (typeof opera == 'object' || typeof opera.postError == 'function' || console.profile.length > 0)) {
-                alert('你惊扰了witch!!!')
-		fuckyou();
-            }
-            if (typeof console.profiles == "object" && console.profiles.length > 0) {
-		alert('你惊扰了witch!!!')
-                fuckyou();
-            }
-        }
-</script>
-<script type="application/javascript" src="https://api.ipify.org?format=jsonp&callback=getIP"></script>
-
-</body>	
+    <header>
+        <h1>你的名字</h1>
+        <p>你的职业或职位</p>
+    </header>
+    <section id="about">
+        <h2>关于我</h2>
+        <p>在这里写一些关于你的个人信息和背景。</p>
+    </section>
+    <section id="experience">
+        <h2>工作经历</h2>
+        <ul>
+            <li>公司名称 - 职位 (年份)</li>
+            <li>公司名称 - 职位 (年份)</li>
+        </ul>
+    </section>
+    <section id="education">
+        <h2>教育背景</h2>
+        <ul>
+            <li>学校名称 - 学位 (年份)</li>
+            <li>学校名称 - 学位 (年份)</li>
+        </ul>
+    </section>
+    <footer>
+        <p>联系方式: <a href="mailto:your.email@example.com">your.email@example.com</a></p>
+    </footer>
+</body>
 </html>
